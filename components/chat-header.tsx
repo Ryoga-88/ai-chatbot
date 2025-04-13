@@ -12,6 +12,9 @@ import { useSidebar } from './ui/sidebar';
 import { memo } from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { type VisibilityType, VisibilitySelector } from './visibility-selector';
+import Image from 'next/image';
+import { ChevronUp } from 'lucide-react';
+
 
 function PureChatHeader({
   chatId,
@@ -79,6 +82,17 @@ function PureChatHeader({
           Deploy with Vercel
         </Link>
       </Button> */}
+      {/* <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent bg-background data-[state=open]:text-sidebar-accent-foreground h-10">
+              <Image
+                src={`https://avatar.vercel.sh/${user.email}`}
+                alt={user.email ?? 'User Avatar'}
+                width={24}
+                height={24}
+                className="rounded-full"
+              />
+              <span className="truncate">{user?.email}</span>
+              <ChevronUp className="ml-auto" />
+            </SidebarMenuButton> */}
     </header>
   );
 }
