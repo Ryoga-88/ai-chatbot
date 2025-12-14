@@ -3,6 +3,7 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import { migrate } from 'drizzle-orm/postgres-js/migrator';
 import postgres from 'postgres';
 
+// Load .env.local for local development (ignored if file doesn't exist)
 config({
   path: '.env.local',
 });
